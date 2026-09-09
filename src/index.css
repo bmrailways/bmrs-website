@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-navy font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-night;
+  }
+}
+
+@layer components {
+  .rail-line {
+    background-image: repeating-linear-gradient(
+      90deg,
+      #c9a227 0 18px,
+      #0e1620 18px 28px
+    );
+  }
+
+  .ticket-card {
+    @apply bg-white shadow-ticket border border-parchment;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-barn px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-barn-700;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-night transition hover:bg-[#d4b03a];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-white/40 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-white/10;
+  }
+
+  .section-kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.28em] text-barn;
+  }
+
+  .prose-bmrs p + p {
+    @apply mt-4;
+  }
+}
