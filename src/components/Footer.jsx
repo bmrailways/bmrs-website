@@ -38,7 +38,7 @@ export default function Footer() {
               Instagram
             </a>
             <a className="hover:text-gold" href={site.social.youtubeLive} target="_blank" rel="noreferrer">
-              YouTube live cameras
+              YouTube Live Cameras
             </a>
             <Link className="hover:text-gold" to="/contact">
               Contact
