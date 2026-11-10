@@ -57,6 +57,25 @@ export const nav = [
   { to: '/contact', label: 'Contact' },
 ]
 
+export const upcomingOpenHouses = [
+  {
+    date: 'November 21, 2026',
+    weekday: 'Saturday',
+    time: '1:00 – 4:00 pm',
+    title: 'November Open House',
+    text: 'The last November visit of the year. Indoor layouts running, weather permitting for the garden railway, and plenty of time to talk trains with our volunteers.',
+    image: '/images/layout-o.jpg',
+  },
+  {
+    date: 'December 19, 2026',
+    weekday: 'Saturday',
+    time: '1:00 – 4:00 pm',
+    title: 'Holiday Open House',
+    text: 'Our last open house of 2026. Come for Christmas-season trains, indoor layouts, and a festive afternoon at Boothe Park. Admission is always free.',
+    image: '/images/outreach-holiday.jpg',
+  },
+]
+
 export const twilight = {
   name: 'Trains at Twilight 5',
   date: 'Friday, September 11, 2026',
@@ -228,20 +247,20 @@ export const calendar = {
   workNights:
     'Typically, the 2nd and 4th Wednesday of each month are designated as work nights at BMRS. Members attend to clean our museum, make repairs and upgrades, and discuss new ideas and plans. Hours: 6:30 pm to 8:30 pm. Adult visitors and model train hobbyists are informally invited, but layouts may be under repair and many trains may not be running.',
   season: [
-    { when: 'May 17, 2026', what: 'Sunday Open House, 12–5 pm. Boothe Park Opening Day!' },
-    { when: 'May 23, 2026', what: 'Closed for Memorial Day weekend' },
-    { when: 'May 30, 2026', what: 'Open House, 1–4 pm' },
-    { when: 'June 6, 13, 20, 27', what: 'Saturday Open Houses, 1–4 pm' },
-    { when: 'July 4 weekend', what: 'Closed for Independence Day weekend' },
-    { when: 'July 11, 18, 25', what: 'Saturday Open Houses, 1–4 pm' },
-    { when: 'July 12, 19, 26', what: 'Sunday Open Houses, 1–4 pm' },
-    { when: 'August 1, 8, 15, 22, 29', what: 'Saturday Open Houses, 1–4 pm' },
-    { when: 'September 5, 2026', what: 'Closed for Labor Day weekend' },
-    { when: 'September 11, 2026', what: 'Trains at Twilight 5, Friday 7:00–9:30 pm' },
-    { when: 'September 19', what: 'Post-season Open House, 1–4 pm' },
-    { when: 'October 17', what: 'Post-season Open House, 1–4 pm' },
-    { when: 'November 21', what: 'Post-season Open House, 1–4 pm' },
-    { when: 'December 19', what: 'Post-season Open House, 1–4 pm' },
+    { when: 'May 17, 2026', what: 'Sunday Open House, 12–5 pm. Boothe Park Opening Day!', past: true },
+    { when: 'May 23, 2026', what: 'Closed for Memorial Day weekend', past: true },
+    { when: 'May 30, 2026', what: 'Open House, 1–4 pm', past: true },
+    { when: 'June 6, 13, 20, 27', what: 'Saturday Open Houses, 1–4 pm', past: true },
+    { when: 'July 4 weekend', what: 'Closed for Independence Day weekend', past: true },
+    { when: 'July 11, 18, 25', what: 'Saturday Open Houses, 1–4 pm', past: true },
+    { when: 'July 12, 19, 26', what: 'Sunday Open Houses, 1–4 pm', past: true },
+    { when: 'August 1, 8, 15, 22, 29', what: 'Saturday Open Houses, 1–4 pm', past: true },
+    { when: 'September 5, 2026', what: 'Closed for Labor Day weekend', past: true },
+    { when: 'September 11, 2026', what: 'Trains at Twilight 5, Friday 7:00–9:30 pm', past: true },
+    { when: 'September 19', what: 'Post-season Open House, 1–4 pm', past: true },
+    { when: 'October 17', what: 'Post-season Open House, 1–4 pm', past: true },
+    { when: 'November 21', what: 'Open House, 1–4 pm' },
+    { when: 'December 19', what: 'Holiday Open House, 1–4 pm' },
   ],
 }
 
@@ -357,7 +376,7 @@ export const faqs = [
   },
   {
     q: 'When are you open?',
-    a: 'During the summer we are open on Saturdays from 1 pm to 4 pm. From November to April we open the 3rd Saturday of the month, weather permitting. Check the Visit / Calendar page for specific 2026 dates, including Trains at Twilight on Friday, September 11.',
+    a: 'During the summer we are open on Saturdays from 1 pm to 4 pm. From November to April we open the 3rd Saturday of the month, weather permitting. The last 2026 dates are November 21 and December 19, 1 pm to 4 pm.',
   },
   {
     q: 'Where are you located?',

@@ -7,7 +7,7 @@ export default function TwilightPage() {
     <>
       <PageHero
         image="/images/hero-twilight.jpg"
-        kicker="Friday night only"
+        kicker="Look back · September 11, 2026"
         title={twilight.name}
         text={`${twilight.date} · ${twilight.time} · ${twilight.location}`}
       >

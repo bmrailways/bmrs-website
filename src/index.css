@@ -20,8 +20,10 @@
   .rail-line {
     background-image: repeating-linear-gradient(
       90deg,
-      #c9a227 0 18px,
-      #0e1620 18px 28px
+      #165c3a 0 14px,
+      #c9a227 14px 22px,
+      #9b2c2c 22px 36px,
+      #c9a227 36px 44px
     );
   }
 

@@ -1,29 +1,29 @@
 import { Link } from 'react-router-dom'
 import NewsletterForm from '../components/NewsletterForm'
 import ReviewsSection from '../components/ReviewsSection'
-import { gallery, layouts, site, twilight } from '../data/site'
+import { gallery, layouts, site, upcomingOpenHouses } from '../data/site'
 
 export default function HomePage() {
   return (
     <>
       <section className="relative min-h-[88vh] overflow-hidden bg-night text-cream">
-        <img src="/images/hero-twilight.jpg" alt="Trains at Twilight at Boothe Park" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-night/70 via-night/45 to-night/85" />
+        <img src="/images/hero-twilight.jpg" alt="Holiday lights on the Railroad Museum at Boothe Park" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-night/70 via-night/50 to-night/90" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-end px-4 pb-16 pt-28 lg:px-6">
-          <p className="section-kicker !text-gold">Stratford, Connecticut · Admission always free</p>
+          <p className="section-kicker !text-gold">Holiday season 2026 · Admission always free</p>
           <h1 className="mt-4 max-w-4xl font-display text-5xl uppercase leading-none tracking-[0.06em] text-white sm:text-6xl lg:text-7xl">
-            The Railroad Museum at Boothe Park
+            All aboard for the holidays
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream/90">
-            Indoor and outdoor model railroads, volunteer-built scenery, and a nighttime event Stratford talks about all year long.
+            Come see the trains, linger under the lights, and spend a Saturday afternoon with us. Open November 21 and December 19, 1 to 4 pm. Always free.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/twilight" className="btn-gold">
-              Trains at Twilight · {twilight.shortDate}
+            <Link to="/visit" className="btn-gold">
+              Nov 21 & Dec 19 · 1–4 pm
             </Link>
-            <Link to="/visit" className="btn-ghost">
-              Open house calendar
-            </Link>
+            <a href={site.mapsUrl} className="btn-ghost" target="_blank" rel="noreferrer">
+              Get directions
+            </a>
           </div>
         </div>
       </section>
@@ -43,36 +43,40 @@ export default function HomePage() {
             <p className="mt-2 text-sm text-cream/75">Videos and live cameras. Click the red LIVE label.</p>
           </a>
           <Link to="/visit" className="bg-navy-700 px-6 py-8 transition hover:bg-navy-500">
-            <p className="font-display text-2xl tracking-wide text-white">2026 Open Houses</p>
-            <p className="mt-2 text-sm text-cream/75">Saturdays 1–4 pm · Sep 19, Oct 17, Nov 21, Dec 19</p>
+            <p className="font-display text-2xl tracking-wide text-white">Still to come</p>
+            <p className="mt-2 text-sm text-cream/75">Saturdays 1–4 pm · Nov 21 and Dec 19</p>
           </Link>
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:px-6 lg:py-24">
-        <div>
-          <p className="section-kicker">This Friday</p>
-          <h2 className="mt-3 font-display text-4xl uppercase tracking-[0.08em] text-navy sm:text-5xl">{twilight.name}</h2>
-          <p className="mt-4 text-lg leading-8 text-navy/80">{twilight.summary}</p>
-          <ul className="mt-6 grid gap-2 text-sm text-navy/80 sm:grid-cols-2">
-            {twilight.highlights.map((item) => (
-              <li key={item} className="border-l-2 border-gold pl-3">
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/twilight" className="btn-primary">
-              Event details
-            </Link>
-            <Link to="/visit" className="inline-flex items-center text-sm font-semibold uppercase tracking-[0.14em] text-barn">
-              Full calendar →
-            </Link>
-          </div>
+      <section className="mx-auto max-w-7xl px-4 py-16 lg:px-6 lg:py-24">
+        <p className="section-kicker">Come visit</p>
+        <h2 className="mt-3 font-display text-4xl uppercase tracking-[0.08em] text-navy sm:text-5xl">Holiday open houses</h2>
+        <p className="mt-4 max-w-3xl text-lg leading-8 text-navy/80">
+          From November through April we open on the third Saturday of the month, weather permitting. These are the last two dates of 2026. Stay as long as you like. Donations are appreciated.
+        </p>
+        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          {upcomingOpenHouses.map((event) => (
+            <article key={event.date} className="ticket-card overflow-hidden lg:grid lg:grid-cols-2">
+              <img src={event.image} alt={event.title} className="h-52 w-full object-cover lg:h-full" />
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-[0.22em] text-barn">{event.weekday}</p>
+                <h3 className="mt-2 font-display text-3xl uppercase tracking-wide">{event.title}</h3>
+                <p className="mt-2 font-semibold text-barn">
+                  {event.date} · {event.time}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-navy/75">{event.text}</p>
+              </div>
+            </article>
+          ))}
         </div>
-        <div className="grid grid-cols-2 gap-3">
-          <img src="/images/gallery-01.jpg" alt="Trains at Twilight crowd and museum building" className="h-56 w-full object-cover md:h-72" />
-          <img src="/images/gallery-09.jpg" alt="Nighttime trains at Boothe Park" className="mt-8 h-56 w-full object-cover md:h-72" />
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link to="/visit" className="btn-primary">
+            Full calendar
+          </Link>
+          <Link to="/layouts" className="inline-flex items-center text-sm font-semibold uppercase tracking-[0.14em] text-barn">
+            See the layouts →
+          </Link>
         </div>
       </section>
 
@@ -129,7 +133,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="section-kicker !text-gold">From the park</p>
-              <h2 className="mt-3 font-display text-4xl uppercase tracking-[0.08em] text-white">Lights, trains, and twilight</h2>
+              <h2 className="mt-3 font-display text-4xl uppercase tracking-[0.08em] text-white">Lights, trains, and the holidays</h2>
             </div>
             <Link to="/media" className="text-sm font-semibold uppercase tracking-[0.14em] text-gold">
               Videos & pics →
@@ -146,7 +150,7 @@ export default function HomePage() {
       <section className="bg-barn py-16 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 lg:flex-row lg:items-center lg:justify-between lg:px-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-white/70">Upcoming events</p>
+            <p className="text-xs uppercase tracking-[0.28em] text-white/70">Holiday openings</p>
             <h2 className="mt-2 font-display text-3xl uppercase tracking-wide">Get notices of special openings</h2>
             <p className="mt-2 max-w-xl text-white/80">We will not use your email for other purposes.</p>
           </div>

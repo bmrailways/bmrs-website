@@ -22,6 +22,10 @@ export default {
         cream: '#f6f1e7',
         parchment: '#ebe3d4',
         gold: '#c9a227',
+        pine: {
+          DEFAULT: '#165c3a',
+          700: '#0f4330',
+        },
       },
       fontFamily: {
         display: ['Oswald', 'Arial Narrow', 'sans-serif'],

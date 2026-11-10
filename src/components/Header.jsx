@@ -78,8 +78,8 @@ export default function Header() {
               )}
             </div>
           ))}
-          <Link to="/twilight" className="ml-2 btn-gold !px-3 !py-2 !text-[11px]">
-            Twilight
+          <Link to="/visit" className="ml-2 btn-gold !px-3 !py-2 !text-[11px]">
+            Open Houses
           </Link>
         </nav>
 
@@ -119,8 +119,8 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <Link to="/twilight" className="mt-2 btn-gold">
-              Trains at Twilight
+            <Link to="/visit" className="mt-2 btn-gold">
+              Holiday Open Houses
             </Link>
             <a href={`mailto:${site.email}`} className="btn-ghost mt-2">
               Email BMRS
