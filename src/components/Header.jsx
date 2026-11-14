@@ -21,11 +21,13 @@ function MenuIcon({ open }) {
 export default function Header() {
   const [open, setOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState(null)
+  const [expanded, setExpanded] = useState(null)
   const location = useLocation()
 
   useEffect(() => {
     setOpen(false)
     setOpenMenu(null)
+    setExpanded(null)
   }, [location.pathname])
 
   useEffect(() => {
@@ -98,7 +100,12 @@ export default function Header() {
           className="grid h-11 w-11 shrink-0 place-items-center text-white xl:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
-          onClick={() => setOpen((value) => !value)}
+          onClick={() =>
+            setOpen((value) => {
+              if (value) setExpanded(null)
+              return !value
+            })
+          }
         >
           <MenuIcon open={open} />
         </button>
@@ -109,24 +116,53 @@ export default function Header() {
           <div className="flex flex-col gap-1">
             {nav.map((item) => (
               <div key={item.to}>
-                <NavLink
-                  to={item.to}
-                  className="flex min-h-11 items-center py-2 text-sm uppercase tracking-[0.16em] text-cream"
-                >
-                  {item.label}
-                </NavLink>
-                {item.children && (
-                  <div className="mb-2 ml-3 border-l border-white/10 pl-3">
-                    {item.children.map((child) => (
-                      <NavLink
-                        key={child.to}
-                        to={child.to}
-                        className="flex min-h-10 items-center py-1.5 text-xs uppercase tracking-[0.14em] text-steel-300"
+                {item.children ? (
+                  <>
+                    <button
+                      type="button"
+                      className="flex min-h-11 w-full items-center justify-between py-2 text-left text-sm uppercase tracking-[0.16em] text-cream"
+                      aria-expanded={expanded === item.label}
+                      onClick={() => setExpanded((current) => (current === item.label ? null : item.label))}
+                    >
+                      {item.label}
+                      <svg
+                        viewBox="0 0 20 20"
+                        className={`h-4 w-4 shrink-0 transition ${expanded === item.label ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        aria-hidden="true"
                       >
-                        {child.label}
-                      </NavLink>
-                    ))}
-                  </div>
+                        <path d="M5 7.5 10 12.5 15 7.5" />
+                      </svg>
+                    </button>
+                    {expanded === item.label && (
+                      <div className="mb-2 ml-3 border-l border-white/10 pl-3">
+                        <NavLink
+                          to={item.to}
+                          className="flex min-h-10 items-center py-1.5 text-xs uppercase tracking-[0.14em] text-steel-300"
+                        >
+                          {item.to === '/layouts' ? 'All layouts' : 'Overview'}
+                        </NavLink>
+                        {item.children.map((child) => (
+                          <NavLink
+                            key={child.to}
+                            to={child.to}
+                            className="flex min-h-10 items-center py-1.5 text-xs uppercase tracking-[0.14em] text-steel-300"
+                          >
+                            {child.label}
+                          </NavLink>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <NavLink
+                    to={item.to}
+                    className="flex min-h-11 items-center py-2 text-sm uppercase tracking-[0.16em] text-cream"
+                  >
+                    {item.label}
+                  </NavLink>
                 )}
               </div>
             ))}
