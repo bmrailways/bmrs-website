@@ -24,11 +24,11 @@ export default function JoinPage() {
           <p className="mt-4 leading-7 text-navy/75">
             Work nights are typically the 2nd and 4th Wednesday of each month from 6:30–8:30 pm. Adult visitors and hobbyists are informally invited.
           </p>
-          <a href={site.membershipPdf} className="btn-primary mt-8" download>
+          <a href={site.membershipPdf} className="btn-primary mt-8 w-full sm:w-auto" download>
             Download the membership application
           </a>
         </div>
-        <div className="ticket-card p-8">
+        <div className="ticket-card p-5 sm:p-8">
           <h3 className="font-display text-2xl uppercase">Email for upcoming events</h3>
           <p className="mt-3 text-sm leading-6 text-navy/70">
             Submit your email and we’ll let you know about upcoming events. We will not use your email for other purposes.

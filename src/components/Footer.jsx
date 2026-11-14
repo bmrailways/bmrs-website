@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="bg-night text-cream">
       <div className="rail-line h-1.5" />
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-4 lg:px-6">
-        <div className="md:col-span-2">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 lg:grid-cols-4 lg:px-6">
+        <div className="lg:col-span-2">
           <p className="font-display text-3xl tracking-[0.12em] text-white">BMRS</p>
           <p className="mt-2 max-w-md text-sm leading-6 text-cream/75">
             {site.name} is an all-volunteer, nonprofit 501(c)(3) railroad museum at Boothe Memorial Park in Stratford, Connecticut.
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 px-4 py-5 text-center text-xs uppercase tracking-[0.16em] text-cream/50">
+      <div className="border-t border-white/10 px-4 pt-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] text-center text-xs uppercase tracking-[0.12em] text-cream/50 sm:tracking-[0.16em]">
         © {new Date().getFullYear()} {site.shortName}. {site.name}, Inc.
       </div>
     </footer>

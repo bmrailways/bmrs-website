@@ -28,8 +28,18 @@ export default function Header() {
     setOpenMenu(null)
   }, [location.pathname])
 
+  useEffect(() => {
+    if (!open) return undefined
+    if (window.matchMedia('(min-width: 1280px)').matches) return undefined
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
+    }
+  }, [open])
+
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-night/95 text-cream backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-night/95 pt-[env(safe-area-inset-top)] text-cream backdrop-blur">
       <div className="rail-line h-1.5" />
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 lg:px-6">
         <Link to="/" className="flex items-center gap-3">
@@ -78,15 +88,16 @@ export default function Header() {
               )}
             </div>
           ))}
-          <Link to="/visit" className="ml-2 btn-gold !px-3 !py-2 !text-[11px]">
+          <Link to="/visit" className="ml-2 shrink-0 btn-gold !whitespace-nowrap !px-3 !py-2 !text-[11px]">
             Open Houses
           </Link>
         </nav>
 
         <button
           type="button"
-          className="grid h-10 w-10 place-items-center text-white xl:hidden"
+          className="grid h-11 w-11 shrink-0 place-items-center text-white xl:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
         >
           <MenuIcon open={open} />
@@ -94,13 +105,13 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-white/10 bg-navy px-4 py-4 xl:hidden">
+        <div className="max-h-[calc(100dvh-5.25rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-navy px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] xl:hidden">
           <div className="flex flex-col gap-1">
             {nav.map((item) => (
               <div key={item.to}>
                 <NavLink
                   to={item.to}
-                  className="block py-2 text-sm uppercase tracking-[0.16em] text-cream"
+                  className="flex min-h-11 items-center py-2 text-sm uppercase tracking-[0.16em] text-cream"
                 >
                   {item.label}
                 </NavLink>
@@ -110,7 +121,7 @@ export default function Header() {
                       <NavLink
                         key={child.to}
                         to={child.to}
-                        className="block py-1.5 text-xs uppercase tracking-[0.14em] text-steel-300"
+                        className="flex min-h-10 items-center py-1.5 text-xs uppercase tracking-[0.14em] text-steel-300"
                       >
                         {child.label}
                       </NavLink>
@@ -119,10 +130,10 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <Link to="/visit" className="mt-2 btn-gold">
+            <Link to="/visit" className="mt-2 w-full btn-gold">
               Holiday Open Houses
             </Link>
-            <a href={`mailto:${site.email}`} className="btn-ghost mt-2">
+            <a href={`mailto:${site.email}`} className="btn-ghost mt-2 w-full">
               Email BMRS
             </a>
           </div>

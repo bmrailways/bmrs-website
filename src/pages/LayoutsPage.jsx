@@ -16,7 +16,7 @@ export default function LayoutsPage() {
           {layouts.map((layout, index) => (
             <article key={layout.slug} className={`ticket-card overflow-hidden md:grid md:grid-cols-2 ${index % 2 ? 'md:[&>img]:order-2' : ''}`}>
               <img src={layout.image} alt={layout.name} className="h-64 w-full object-cover md:h-full" />
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
                 <p className="text-xs uppercase tracking-[0.22em] text-barn">{layout.kicker}</p>
                 <h2 className="mt-2 font-display text-3xl uppercase tracking-wide">{layout.name}</h2>
                 <p className="mt-4 leading-7 text-navy/80">{layout.summary}</p>

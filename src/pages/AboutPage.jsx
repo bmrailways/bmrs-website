@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
+import RecognitionSection from '../components/RecognitionSection'
 import ReviewsSection from '../components/ReviewsSection'
 import { site } from '../data/site'
 
@@ -24,6 +25,8 @@ export default function AboutPage() {
         </div>
         <img src="/images/gallery-02.jpg" alt="Visitors at the Railroad Museum" className="h-full max-h-[420px] w-full object-cover" />
       </section>
+
+      <RecognitionSection />
 
       <section className="bg-parchment">
         <div className="mx-auto max-w-7xl px-4 py-16 lg:px-6">

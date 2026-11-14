@@ -18,10 +18,10 @@ export default function StemPage() {
               href={link.href}
               target="_blank"
               rel="noreferrer"
-              className="ticket-card flex items-center justify-between p-5 transition hover:-translate-y-0.5"
+              className="ticket-card flex items-center justify-between gap-4 p-5 transition hover:-translate-y-0.5"
             >
-              <span className="font-display text-xl uppercase tracking-wide">{link.name}</span>
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-barn">Open →</span>
+              <span className="min-w-0 flex-1 font-display text-xl uppercase tracking-wide">{link.name}</span>
+              <span className="shrink-0 text-xs font-semibold uppercase tracking-[0.16em] text-barn">Open →</span>
             </a>
           ))}
         </div>

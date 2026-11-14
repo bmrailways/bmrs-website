@@ -16,7 +16,7 @@ export default function SponsorsPage() {
             <article key={sponsor.name} className="ticket-card p-6">
               <h2 className="font-display text-2xl uppercase tracking-wide">{sponsor.name}</h2>
               {sponsor.detail && <p className="mt-3 text-sm leading-6 text-navy/75">{sponsor.detail}</p>}
-              <div className="mt-4 space-y-1 text-sm text-navy/80">
+              <div className="mt-4 space-y-1 break-words text-sm text-navy/80">
                 {sponsor.contact && <p>{sponsor.contact}</p>}
                 {sponsor.phone && <p>{sponsor.phone}</p>}
                 {sponsor.href && (

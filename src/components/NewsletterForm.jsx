@@ -14,11 +14,11 @@ export default function NewsletterForm({ dark = false }) {
         name="body"
         required
         placeholder="Your email address"
-        className={`min-h-12 flex-1 rounded-sm border px-4 text-sm outline-none ring-gold/40 focus:ring-2 ${
+        className={`min-h-12 w-full min-w-0 flex-1 rounded-sm border px-4 text-base outline-none ring-gold/40 focus:ring-2 sm:text-sm ${
           dark ? 'border-white/20 bg-white/10 text-white placeholder:text-white/50' : 'border-parchment bg-white text-navy'
         }`}
       />
-      <button type="submit" className={dark ? 'btn-gold' : 'btn-primary'}>
+      <button type="submit" className={`${dark ? 'btn-gold' : 'btn-primary'} w-full sm:w-auto`}>
         Keep me posted
       </button>
     </form>

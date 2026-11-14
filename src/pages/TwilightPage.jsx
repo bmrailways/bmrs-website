@@ -23,7 +23,7 @@ export default function TwilightPage() {
 
       <section className="mx-auto max-w-7xl px-4 py-16 lg:px-6">
         <p className="section-kicker">The event Stratford talks about all year</p>
-        <h2 className="mt-3 max-w-3xl font-display text-4xl uppercase tracking-[0.08em]">{twilight.headline}</h2>
+        <h2 className="mt-3 max-w-3xl font-display text-3xl uppercase tracking-[0.08em] sm:text-4xl">{twilight.headline}</h2>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-navy/80">{twilight.summary} Admission is {twilight.admission.toLowerCase()}. Tell a friend!</p>
         <p className="mt-4 max-w-3xl leading-7 text-navy/75">
           This year we’ll have a remote-control tank, portable trains, and a chance to stargaze with the Boothe Memorial Astronomy Society. Seriously folks, this is a premier event at Boothe Park. Don’t miss it.

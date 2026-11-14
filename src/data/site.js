@@ -71,7 +71,7 @@ export const upcomingOpenHouses = [
     weekday: 'Saturday',
     time: '1:00 – 4:00 pm',
     title: 'Holiday Open House',
-    text: 'Our last open house of 2026. Come for Christmas-season trains, indoor layouts, and a festive afternoon at Boothe Park. Admission is always free.',
+    text: 'Our last open house of 2026. Santa arrives at 2 pm. Come for Christmas-season trains, indoor layouts, and a festive afternoon at Boothe Park. Admission is always free.',
     image: '/images/outreach-holiday.jpg',
   },
 ]
@@ -260,7 +260,7 @@ export const calendar = {
     { when: 'September 19', what: 'Post-season Open House, 1–4 pm', past: true },
     { when: 'October 17', what: 'Post-season Open House, 1–4 pm', past: true },
     { when: 'November 21', what: 'Open House, 1–4 pm' },
-    { when: 'December 19', what: 'Holiday Open House, 1–4 pm' },
+    { when: 'December 19', what: 'Holiday Open House, 1–4 pm. Santa arrives at 2 pm' },
   ],
 }
 

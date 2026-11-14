@@ -13,7 +13,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main className="min-w-0 max-lg:overflow-x-clip">
         <Outlet />
       </main>
       <Footer />

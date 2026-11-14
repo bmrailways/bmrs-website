@@ -13,12 +13,12 @@ export default function MediaPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 lg:px-6">
         <div className="grid gap-10">
           {videos.map((video) => (
-            <article key={video.youtubeId} className="ticket-card overflow-hidden lg:grid lg:grid-cols-2">
-              <div className="aspect-video bg-night">
+            <article key={video.youtubeId} className="ticket-card min-w-0 overflow-hidden lg:grid lg:grid-cols-2">
+              <div className="aspect-video min-w-0 bg-night">
                 <iframe
                   title={video.title}
                   src={`https://www.youtube.com/embed/${video.youtubeId}`}
-                  className="h-full w-full"
+                  className="h-full w-full max-w-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />

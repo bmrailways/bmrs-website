@@ -1,17 +1,18 @@
 import { Link } from 'react-router-dom'
 import NewsletterForm from '../components/NewsletterForm'
+import RecognitionSection from '../components/RecognitionSection'
 import ReviewsSection from '../components/ReviewsSection'
 import { gallery, layouts, site, upcomingOpenHouses } from '../data/site'
 
 export default function HomePage() {
   return (
     <>
-      <section className="relative min-h-[88vh] overflow-hidden bg-night text-cream">
+      <section className="relative min-h-[70svh] overflow-hidden bg-night text-cream sm:min-h-[88vh]">
         <img src="/images/hero-twilight.jpg" alt="Holiday lights on the Railroad Museum at Boothe Park" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-night/70 via-night/50 to-night/90" />
-        <div className="relative mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-end px-4 pb-16 pt-28 lg:px-6">
+        <div className="relative mx-auto flex min-h-[70svh] max-w-7xl flex-col justify-end px-4 pb-12 pt-24 sm:min-h-[88vh] sm:pb-16 sm:pt-28 lg:px-6">
           <p className="section-kicker !text-gold">Holiday season 2026 · Admission always free</p>
-          <h1 className="mt-4 max-w-4xl font-display text-5xl uppercase leading-none tracking-[0.06em] text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-4 max-w-4xl font-display text-4xl uppercase leading-tight tracking-[0.06em] text-white sm:text-6xl sm:leading-none lg:text-7xl">
             All aboard for the holidays
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream/90">
@@ -29,7 +30,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-navy text-cream">
-        <div className="mx-auto grid max-w-7xl gap-px bg-white/10 md:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
           <a href={site.social.facebook} target="_blank" rel="noreferrer" className="bg-navy-700 px-6 py-8 transition hover:bg-navy-500">
             <p className="font-display text-2xl tracking-wide text-white">Facebook</p>
             <p className="mt-2 text-sm text-cream/75">Catch up on the latest news about BMRS.</p>
@@ -51,9 +52,9 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-7xl px-4 py-16 lg:px-6 lg:py-24">
         <p className="section-kicker">Come visit</p>
-        <h2 className="mt-3 font-display text-4xl uppercase tracking-[0.08em] text-navy sm:text-5xl">Holiday open houses</h2>
+        <h2 className="mt-3 font-display text-4xl uppercase tracking-[0.08em] text-navy sm:text-5xl">Open houses</h2>
         <p className="mt-4 max-w-3xl text-lg leading-8 text-navy/80">
-          From November through April we open on the third Saturday of the month, weather permitting. These are the last two dates of 2026. Stay as long as you like. Donations are appreciated.
+          From October through June we open on the third Saturday of the month from 1-4 pm.
         </p>
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {upcomingOpenHouses.map((event) => (
@@ -126,6 +127,8 @@ export default function HomePage() {
         <img src="/images/park-map.jpg" alt="Map to BMRS at Boothe Memorial Park" className="w-full border border-parchment bg-white object-contain p-3" />
       </section>
 
+      <RecognitionSection />
+
       <ReviewsSection />
 
       <section className="bg-night py-16 text-cream">
@@ -151,7 +154,7 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 lg:flex-row lg:items-center lg:justify-between lg:px-6">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-white/70">Holiday openings</p>
-            <h2 className="mt-2 font-display text-3xl uppercase tracking-wide">Get notices of special openings</h2>
+            <h2 className="mt-2 font-display text-3xl uppercase tracking-wide">Join our email list</h2>
             <p className="mt-2 max-w-xl text-white/80">We will not use your email for other purposes.</p>
           </div>
           <NewsletterForm dark />

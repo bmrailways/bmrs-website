@@ -5,6 +5,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -32,15 +34,15 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-barn px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-barn-700;
+    @apply inline-flex max-w-full items-center justify-center gap-2 whitespace-normal rounded-sm bg-barn px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-barn-700;
   }
 
   .btn-gold {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-night transition hover:bg-[#d4b03a];
+    @apply inline-flex max-w-full items-center justify-center gap-2 whitespace-normal rounded-sm bg-gold px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.14em] text-night transition hover:bg-[#d4b03a];
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-white/40 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-white/10;
+    @apply inline-flex max-w-full items-center justify-center gap-2 whitespace-normal rounded-sm border border-white/40 px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-white/10;
   }
 
   .section-kicker {
@@ -49,5 +51,28 @@
 
   .prose-bmrs p + p {
     @apply mt-4;
+  }
+}
+
+/* Phone and tablet only. Desktop (lg, 1024px and up) keeps the component styles above. */
+@media (max-width: 1023px) {
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  li,
+  blockquote {
+    overflow-wrap: break-word;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .section-kicker {
+    letter-spacing: 0.14em;
   }
 }

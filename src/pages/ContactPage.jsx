@@ -46,8 +46,8 @@ export default function ContactPage() {
             <NewsletterForm />
           </div>
         </div>
-        <div className="overflow-hidden border border-parchment bg-white">
-          <iframe title="Map to Boothe Memorial Park" src={site.mapsEmbed} className="h-[420px] w-full border-0" loading="lazy" />
+        <div className="min-w-0 overflow-hidden border border-parchment bg-white">
+          <iframe title="Map to Boothe Memorial Park" src={site.mapsEmbed} className="h-[420px] w-full max-w-full border-0" loading="lazy" />
         </div>
       </section>
     </>

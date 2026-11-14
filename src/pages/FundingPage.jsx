@@ -12,7 +12,7 @@ export default function FundingPage() {
         text="That’s a great question. Donations play a major role in funding our all-volunteer museum."
       />
       <section className="mx-auto max-w-3xl px-4 py-16 lg:px-6">
-        <div className="ticket-card p-8">
+        <div className="ticket-card p-5 sm:p-8">
           <p className="leading-8 text-navy/80">
             BMRS is a nonprofit charitable 501(c)(3) organization. Admission to every open house, including Trains at Twilight, is always free. We appreciate donations that keep layouts maintained, live video running, and community outreach on the road.
           </p>
