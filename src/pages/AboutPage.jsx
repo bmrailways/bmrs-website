@@ -11,7 +11,7 @@ export default function AboutPage() {
         image="/images/gallery-03.jpg"
         kicker="All aboard"
         title="A welcome from our president"
-        text="Welcome to the Boothe Memorial Railway Society holiday open houses. We hope to see you November 21 and December 19."
+        text="Welcome to the Boothe Memorial Railway Society holiday open houses. We hope to see you November 21, December 12, and December 19."
       />
       <section className="mx-auto grid max-w-7xl gap-10 px-4 py-16 lg:grid-cols-2 lg:px-6">
         <div className="prose-bmrs text-lg leading-8 text-navy/80">

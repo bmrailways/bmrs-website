@@ -67,6 +67,14 @@ export const upcomingOpenHouses = [
     image: '/images/layout-o.jpg',
   },
   {
+    date: 'December 12, 2026',
+    weekday: 'Saturday',
+    time: '1:00 – 4:00 pm',
+    title: 'Friends of Boothe',
+    text: 'We will be open in conjunction with the Friends of Boothe event. Come see the trains from 1 to 4 pm. Admission is always free.',
+    image: '/images/gallery-02.jpg',
+  },
+  {
     date: 'December 19, 2026',
     weekday: 'Saturday',
     time: '1:00 – 4:00 pm',
@@ -168,8 +176,8 @@ export const layouts = [
     shortName: 'N Gauge',
     kicker: 'A whole room of tiny trains',
     summary: 'We’ve dedicated a whole room to our layout with the smallest trains!',
-    image: '/images/ho-3.jpg',
-    gallery: ['/images/ho-3.jpg', '/images/ho-6.jpg', '/images/gallery-11.jpg', '/images/video-openhouse.jpg'],
+    image: '/images/n-gauge-1.jpg',
+    gallery: ['/images/n-gauge-1.jpg', '/images/n-gauge-2.jpg', '/images/n-gauge-3.jpg'],
     description:
       'Our “tiny trains” room has scenery that reminds us of an autumn scene in Connecticut. After a visit to the garden railway, it is easy to see the differences in scale that the N Gauge room highlights: a whole landscape packed into a dedicated space.',
     factsTitle: 'Lots of detail in a small scale',
@@ -260,6 +268,7 @@ export const calendar = {
     { when: 'September 19', what: 'Post-season Open House, 1–4 pm', past: true },
     { when: 'October 17', what: 'Post-season Open House, 1–4 pm', past: true },
     { when: 'November 21', what: 'Open House, 1–4 pm' },
+    { when: 'December 12', what: 'Open House with the Friends of Boothe event, 1–4 pm' },
     { when: 'December 19', what: 'Holiday Open House, 1–4 pm. Santa arrives at 2 pm' },
   ],
 }
@@ -376,7 +385,7 @@ export const faqs = [
   },
   {
     q: 'When are you open?',
-    a: 'During the summer we are open on Saturdays from 1 pm to 4 pm. From November to April we open the 3rd Saturday of the month, weather permitting. The last 2026 dates are November 21 and December 19, 1 pm to 4 pm.',
+    a: 'During the summer we are open on Saturdays from 1 pm to 4 pm. From November to April we open the 3rd Saturday of the month, weather permitting. The last 2026 dates are November 21, December 12, and December 19, 1 pm to 4 pm. December 12 is open with the Friends of Boothe event.',
   },
   {
     q: 'Where are you located?',

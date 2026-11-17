@@ -11,7 +11,7 @@ export default function VisitPage() {
         image="/images/outreach-holiday.jpg"
         kicker="Holiday season"
         title="All aboard for the holidays"
-        text="November 21 and December 19, Saturdays from 1 to 4 pm. Admission is free. Donations are appreciated."
+        text="November 21, December 12, and December 19, Saturdays from 1 to 4 pm. Admission is free. Donations are appreciated."
       >
         <p className="text-cream/80">{calendar.hours}</p>
       </PageHero>
@@ -69,7 +69,7 @@ export default function VisitPage() {
             <p className="section-kicker">Winter hours</p>
             <h2 className="mt-3 font-display text-3xl uppercase tracking-wide">November to April</h2>
             <p className="mt-4 leading-7 text-navy/80">
-              From November to April we open the 3rd Saturday of the month. Remaining 2026 dates are November 21 and December 19.
+              From November to April we open the 3rd Saturday of the month. Remaining 2026 dates are November 21, December 12, and December 19. On December 12 we open with the Friends of Boothe event, 1 to 4 pm.
             </p>
             <div className="mt-8">
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em]">Email for upcoming events</p>

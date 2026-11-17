@@ -16,11 +16,11 @@ export default function HomePage() {
             All aboard for the holidays
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream/90">
-            Come see the trains, linger under the lights, and spend a Saturday afternoon with us. Open November 21 and December 19, 1 to 4 pm. Always free.
+            Come see the trains, linger under the lights, and spend a Saturday afternoon with us. Open November 21, December 12, and December 19, 1 to 4 pm. Always free.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/visit" className="btn-gold">
-              Nov 21 & Dec 19 · 1–4 pm
+              Nov 21, Dec 12 & Dec 19 · 1–4 pm
             </Link>
             <a href={site.mapsUrl} className="btn-ghost" target="_blank" rel="noreferrer">
               Get directions
@@ -45,7 +45,7 @@ export default function HomePage() {
           </a>
           <Link to="/visit" className="bg-navy-700 px-6 py-8 transition hover:bg-navy-500">
             <p className="font-display text-2xl tracking-wide text-white">Still to come</p>
-            <p className="mt-2 text-sm text-cream/75">Saturdays 1–4 pm · Nov 21 and Dec 19</p>
+            <p className="mt-2 text-sm text-cream/75">Saturdays 1–4 pm · Nov 21, Dec 12, and Dec 19</p>
           </Link>
         </div>
       </section>
